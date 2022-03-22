@@ -1,2 +1,3 @@
-# Projektowanie-Interfejsow-Webowych
-Repozytorium utworzone w celu dokumentowania i przesyłania prac powstałych w ramach zajęć z Projektowania Interfejsów Webowych.
+# Projektowanie Interfejsów Webowych
+
+Tutaj publikowane są zadania i kod powstały w ramach kursu Projektowania Interfesjów Webowych.
