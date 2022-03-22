@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Lista zadań</title> 
+</head>
+<body>
+    <div id="modal" class="modal-container">
+        <div id = "the-modal-content" class="modal-content">
+            <h2>Czy na pewno chcesz usunąć zadanie?</h2>
+            <div style="margin-left: auto; margin-right: auto;">
+                <button id="modal-yes" class="btn btn-success">Tak</button>
+                <button id="modal-no" class="btn btn-danger">Nie</button>
+            </div>
+        </div>
+
+    </div>
+    <h1 class="custom-header">Wielka lista zadań</h1>
+    <div class="input-container input-group">
+        <label class="input-group-text" for="todo-text" style="background-color: lightgreen; border: 0px;">Wprowadź treść zadania:</label>
+        <input id ="todo-text"/>
+        <button type="button" id="add" class="btn btn-success" onclick="add();">Dodaj</button>
+        <button type="button" class="btn btn-secondary" id="undo" disabled>Cofnij</button>
+        
+        <label class="input-group-text" for="search-text" style="background-color: lightgreen; border: 0px;">Wyszukaj</label>
+        <input id ="search-text" onkeyup="searchInList()" placeholder="Szukaj..."/>
+        
+        <div class="input-group-text">
+        <input class="form-check-input input-group-text" type="checkbox" value="" id="flexCheck">
+        <label class="form-check-label" for="flexCheck">
+            Case sensitive
+        </label>
+        </div>
+
+        
+    </div>
+
+    <ul id="todo-list">
+    </ul>
+
+    
+
+    <script src="script.js"></script>
+
+</body>

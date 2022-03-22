@@ -1,0 +1,67 @@
+task:hover {
+  cursor: pointer;
+}
+
+#modal {
+}
+
+.input-container {
+  background-color: lightgreen;
+  padding: 10px 10px 10px 10px;
+  border: 0px;
+}
+
+.modal-container {
+  display: none;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.custom-header {
+  text-align: center;
+  background-color: gray;
+  margin-bottom: 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.task {
+  font-size: x-large;
+}
+
+#the-modal-content {
+  text-align: center;
+}
+
+.modal-content {
+  background-color: gray;
+  border-radius: 2px;
+  border-color: lightgreen;
+  color: black;
+  padding: 20px;
+  height: 200px;
+  width: 50%;
+  margin: 20% auto;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+}
+
+li {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.striked {
+  text-decoration: line-through;
+  color: gray;
+}
+
+body {
+  background-color: lightgray;
+}
