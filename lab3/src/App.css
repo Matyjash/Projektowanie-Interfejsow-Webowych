@@ -1,0 +1,160 @@
+.App, html {
+  height: auto;
+  width: 100vw;
+  color: black;
+  display: flex;
+  background-color: rgb(254, 156, 65)
+}
+
+.Form{
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.Sidebar {
+  height: 100vh;
+  width: 20%;
+  background-color:orange;
+  border: 1px solid black;
+  margin: 0;
+  
+}
+
+.AdsList{
+  height: auto;
+  padding: 0;
+  width: 100%;
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+}
+
+.user {
+  flex: 20%;
+  text-align: center;
+}
+
+
+.AdContent {
+  flex: 80%;
+  width: 100%;
+  text-align: justify;
+  padding: 15px 15px 15px 15px;
+}
+
+.SidebarList{
+  height: auto;
+  padding: 0;
+  width: 100%;
+}
+
+
+.AdRow{
+  width: 95%;
+  height: auto;
+  background-color:darkorange;
+  list-style-type: none;
+  display: flex;
+  margin: 20px 0px 20px 20px;
+  flex-direction: row;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+
+
+.SidebarList .row {
+  width: 100%;
+  height: 60px;
+  background-color:orange;
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+
+}
+.message:hover{
+  cursor: pointer;
+}
+.Panel{
+  width: 100%;
+  height: 100%;
+}
+
+.Description{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: large;
+  text-decoration: wavy;
+  text-align:justify;
+}
+
+.Title {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  border: 1px solid black;
+  border-left: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size:large;
+  display: block;
+  width: auto;
+  background-color: orange;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.SearchBar {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  font-size:xx-large;
+  display: flex;
+  padding: 15px 15px 15px 15px;
+  width: 35%;
+  background-color: orange;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.SidebarList .row:hover{
+  cursor: pointer;
+  background-color: darkorange;
+}
+
+.SidebarList #active{
+  background-color: darkorange;
+}
+
+.row #icon {
+  flex: 30%;
+  display: grid;
+  place-items: center;
+}
+
+.AdRow #course {
+  font-weight: bold;
+}
+
+.tag{
+  font-weight: bold;
+  background-color: orange;
+  margin-right: 10px;
+}
+
+.row #title{
+  flex: 70%;
+}
