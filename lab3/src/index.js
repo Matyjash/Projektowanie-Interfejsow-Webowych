@@ -1,44 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import AlertTemplate from "react-alert-template-basic";
 import { transitions, positions, Provider as AlertProvider } from "react-alert";
-
-export const ads = [
-  {
-    author: "Zbyszek",
-    email: "???",
-    course: "AK2 Projekt",
-    description:
-      "Poszukuje grupy do projektu z Architektury Komputerów 2. Oferuje duże doświadczenie ponieważ zaliczam ten kurs już trzeci raz :-)",
-    tags: ["AK2", "Projekt", "Architektura Komputerów 2"],
-  },
-  {
-    author: "Franek",
-    email: "???",
-    course: "NiDUC Projekt",
-    description:
-      "Witam wszystkich, poszukuje grupy do projektu z Niezawodności i Diagnostyki Układów Cyfrowych, szczególnie interesuje mnie temat Metody detekcji zakłóceń pomiędzy aparatem konsumpcji a cieczą ściśle chmielową o odczycie kwasowym",
-    tags: ["NiDUC", "Projekt"],
-  },
-  {
-    author: "Janek",
-    email: "???",
-    course: "Projekt zespołowy",
-    description:
-      "Hej. Podobno w tym semestrze mamy kurs o nazwie Projekt Zespołowy. Nie do końca rozumiem na czym on polega i kiedy prowadzący przedstawią nam listę tematów... Czy ktoś chciałby przygranąć mnie do grupy?",
-    tags: ["Projekt", "Projekt zespołowy"],
-  },
-  {
-    author: "Olek",
-    email: "???",
-    course: "PIW Projekt",
-    description:
-      "Cześć. Czy ktoś poszukuje może grupy do projektu z Projektowania Interfejsów Webowych? Nigdzie nie mogę znaleźć ogłoszeń związanych z tym kursem... Czyżby każdy znalazł już swoją grupę? ",
-    tags: ["PIW", "Projekt"],
-  },
-];
+import axios from "axios";
 
 export const adsGroup = [
   {
@@ -52,16 +18,15 @@ export const adsGroup = [
   },
 ];
 
-if (!localStorage.getItem("ads") || localStorage.getItem("ads") === undefined) {
-  localStorage.setItem("ads", JSON.stringify(ads));
-}
-
-if (
-  !localStorage.getItem("ads-group") ||
-  localStorage.getItem("ads-group") === undefined
-) {
-  localStorage.setItem("ads-group", JSON.stringify(adsGroup));
-}
+axios.get("data/Users.json").then((res) => {
+  const users = res.data;
+  if (
+    !localStorage.getItem("users") ||
+    localStorage.getItem("users") === undefined
+  ) {
+    localStorage.setItem("users", JSON.stringify(users));
+  }
+});
 
 const options = {
   position: positions.BOTTOM_CENTER,

@@ -1,0 +1,20 @@
+[
+    {
+      "title": "Grupa",
+      "members": [
+        { "person": "Andrzej Ucho", "tags": ["frontend", "devops"] },
+        { "person": "Dominika Palec", "tags": ["backend", "ui/ux"] }
+      ],
+      "course": "BD2 Projekt",
+      "description": "Poszukujemy członków do grupy."
+    },
+    {
+        "title": "Grupa operacyjna",
+        "members": [
+          { "person": "Marek Jodłowski", "tags": ["frontend"] },
+          { "person": "Bartek Kopara", "tags": ["backend", "efekty specjalne"] }
+        ],
+        "course": "PiPG Projekt",
+        "description": "Poszukujemy !!"
+      }
+  ]

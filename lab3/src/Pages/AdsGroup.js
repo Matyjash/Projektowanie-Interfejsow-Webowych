@@ -3,6 +3,7 @@ import TextField from "@mui/material/TextField";
 import "../App.css";
 import Select from "react-select";
 import ChatIcon from "@mui/icons-material/Chat";
+import axios from "axios";
 
 class AdsGroup extends React.Component {
   constructor() {
@@ -52,9 +53,15 @@ class AdsGroup extends React.Component {
   };
 
   getData = () => {
-    const saved = localStorage.getItem("ads-group");
-    const initialValue = JSON.parse(saved);
-    this.state.AdsContent = initialValue;
+    let saved;
+    axios.get("data/AdsGroups.json").then((res) => {
+      const ads = res.data;
+      saved = ads;
+      console.log(saved);
+      this.state.AdsContent = saved;
+      this.state.FilteredAds = this.state.AdsContent;
+      this.forceUpdate();
+    });
   };
 
   render() {

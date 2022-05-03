@@ -1,20 +1,31 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import TextField from "@mui/material/TextField";
 import "../App.css";
 import ChatIcon from "@mui/icons-material/Chat";
 import Select from "react-select";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
 function Ads() {
-  const [AdsContent] = useState(() => {
-    const saved = localStorage.getItem("ads");
-    const initialValue = JSON.parse(saved);
-    return initialValue || "";
-  });
+  const [AdsContent, setAdsContent] = useState([]);
+
+  useEffect(() => {
+    axios.get("data/Ads.json").then((res) => {
+      const ads = res.data;
+      setAdsContent(ads);
+      console.log(AdsContent);
+    });
+  }, []);
 
   const [selectText, setSelectText] = useState("description");
 
   let selectHandler = (e) => {
     setSelectText(e.value);
+  };
+
+  const newTo = {
+    pathname: "/category/595212758daa6810cbba4104",
+    param1: "Par1",
   };
 
   const handleMessage = (key) => {
@@ -29,6 +40,10 @@ function Ads() {
     { value: "course", label: "Kurs" },
     { value: "tags", label: "Tagi" },
   ];
+
+  const postUser = (user) => {
+    localStorage.setItem("user", JSON.stringify(user));
+  };
 
   const [inputText, setInputText] = useState("");
 
@@ -49,6 +64,7 @@ function Ads() {
         return el.tags.some((item) => inputText === item.toLowerCase());
     }
   });
+
   return (
     <>
       <div className="Panel">
@@ -75,11 +91,14 @@ function Ads() {
             return (
               <li key={key} className="AdRow">
                 <div className="user">
-                  <img
-                    className="image"
-                    alt="Profile im"
-                    src={require("../Images/icon.png")}
-                  />
+                  <Link
+                    to={{
+                      pathname: `/ads/${val.author}`,
+                    }}
+                    onClick={() => postUser(val)}
+                  >
+                    <img className="image" alt="Profile im" src={val.avatar} />
+                  </Link>
                   {""}
                   <div id="author">{val.author}</div>{" "}
                 </div>

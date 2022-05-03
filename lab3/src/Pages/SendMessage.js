@@ -63,6 +63,7 @@ function Add(props) {
                 type="message"
                 name="message"
                 rows={5}
+                autoFocus
                 {...register("message")}
               />
             </Form.Group>
