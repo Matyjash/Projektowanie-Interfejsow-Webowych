@@ -1,0 +1,38 @@
+[
+    {
+      "author": "Zbyszek",
+      "avatar": "https://i.picsum.photos/id/629/70/100.jpg?hmac=dyJoJt2r499eh6WgKL32FfrARXeUB8a-smzswqCEz2A",
+      "email": "zbyszek.zbychu@gmail.com",
+      "course": "AK2 Projekt",
+      "description":
+        "Poszukuje grupy do projektu z Architektury Komputerów 2. Oferuje duże doświadczenie ponieważ zaliczam ten kurs już trzeci raz :-)",
+      "tags": ["AK2", "Projekt", "Architektura Komputerów 2"]
+    },
+    {
+      "author": "Franek",
+      "avatar": "https://i.picsum.photos/id/680/70/100.jpg?hmac=UjmR1mPJMyVAjPZR7PgbdsB6CBHoPevTQhWqipDDBto",
+      "email": "franiu.pwr.edu.pl",
+      "course": "NiDUC Projekt",
+      "description":
+        "Witam wszystkich. Poszukuje grupy do projektu z Niezawodności i Diagnostyki Układów Cyfrowych, szczególnie interesuje mnie temat Metody detekcji zakłóceń pomiędzy aparatem konsumpcji a cieczą ściśle chmielową o odczycie kwasowym",
+      "tags": ["NiDUC", "Projekt"]
+    },
+    {
+      "author": "Janek",
+      "avatar": "https://i.picsum.photos/id/733/70/100.jpg?hmac=3K5gVcY4zBnfp0IQRRXDNapX3XdO7rV00R_xstjtAsY",
+      "email": "JanekPL2000@gmail.com",
+      "course": "Projekt zespołowy",
+      "description":
+        "Hej. Podobno w tym semestrze mamy kurs o nazwie Projekt Zespołowy. Nie do końca rozumiem na czym on polega i kiedy prowadzący przedstawią nam listę tematów... Czy ktoś chciałby przygranąć mnie do grupy?",
+      "tags": ["Projekt", "Projekt zespołowy"]
+    },
+    {
+      "author": "Olek",
+      "avatar": "https://i.picsum.photos/id/738/70/100.jpg?hmac=wkhN90IUUrnJ6--76x8R8aTINPXLNDq5EUZMa3VQnWM",
+      "email": "Olee331@gmail.com",
+      "course": "PIW Projekt",
+      "description":
+        "Cześć. Czy ktoś poszukuje może grupy do projektu z Projektowania Interfejsów Webowych? Nigdzie nie mogę znaleźć ogłoszeń związanych z tym kursem... Czyżby każdy znalazł już swoją grupę? ",
+      "tags": ["PIW", "Projekt"]
+    }
+  ]
