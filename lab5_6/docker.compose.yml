@@ -1,0 +1,9 @@
+vsersion: "3.7"
+
+service:
+  app:
+    image: piwo
+    ports:
+    - 3000:3000
+    volume:
+    - ./src/:/app/src

@@ -1,6 +1,8 @@
 import React from "react";
+import {logout} from "../Firebase/users";
 
 const Logout = () => {
+  logout();
   if (
     !localStorage.getItem("currentUser") ||
     localStorage.getItem("currentUser") === undefined

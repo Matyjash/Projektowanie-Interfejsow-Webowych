@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useCurrentUser } from "../CurrentUserContext.js";
+import {registerWithEmailAndPassword} from "../Firebase/users";
 import axios from "axios";
 
 const Register = () => {
@@ -7,18 +8,18 @@ const Register = () => {
   const [currentUser, setCurrentUser] = useState([]);
   const [users, setUsers] = useState([]);
 
-  const register = (name, password) => {
-    const newUser = { userName: name, password: password };
+  // const register = (name, password) => {
+  //   const newUser = { userName: name, password: password };
 
-    let users = JSON.parse(localStorage.getItem("users"));
-    console.log(users);
-    users.push(newUser);
-    localStorage.setItem("users", JSON.stringify(users));
-    alert("Zarejestrowano");
+  //   let users = JSON.parse(localStorage.getItem("users"));
+  //   console.log(users);
+  //   users.push(newUser);
+  //   localStorage.setItem("users", JSON.stringify(users));
+  //   alert("Zarejestrowano");
 
-    document.getElementById("input_name").value = "";
-    document.getElementById("password_name").value = "";
-  };
+  //   document.getElementById("input_name").value = "";
+  //   document.getElementById("password_name").value = "";
+  // };
 
   useEffect(() => {
     const data = localStorage.getItem("currentUser");
@@ -47,10 +48,8 @@ const Register = () => {
         </div>
         <button
           onClick={() => {
-            register(
-              document.getElementById("input_name").value,
-              document.getElementById("password_name").value
-            );
+            registerWithEmailAndPassword(document.getElementById("input_name").value,
+            document.getElementById("password_name").value);
           }}
         >
           Zarejestruj
